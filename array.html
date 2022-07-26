@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Array</title>
+</head>
+
+<body>
+  <p id="demo"></p>
+  <p id="constructor"></p>
+  <p id="loop"></p>
+
+  <script>
+    // Javascript Array are list-like objects
+    // A Single Array can store Multiple Data
+    // Basic Syntax of an Array
+    // var fruits = ["Apple", "Banana", "Orange"];
+    // document.getElementById("demo").innerHTML = fruits;
+    // Creating an Array with the use of Constructor
+    // var cities = new Array("Ilorin", "Lagos", "Oyo", "Ibadan");
+    // document.getElementById("constructor").innerHTML = cities;
+
+    // Access an Array
+    // Array Items are accessed using Integers
+    // Array are Zero-Indexed
+    // The count start from 0 , not from 1
+    // var cities = new Array("Ilorin", "Lagos", "Oyo", "Ibadan");
+    // Access the last item
+    // var lastitem = cities[cities.length - 3];
+    // Add Items to an Array
+    // Add Items to the end
+    // cities.push("Offa");
+    // Add Items to the front
+    // cities.unshift("Osun", "Ibrahim");
+    // Pop remove from end
+    // cities.pop();
+    // shift remove from the front
+    cities.shift();
+    document.getElementById("constructor").innerHTML = lastitem;
+
+    let person = ["Jumfag", "Umm Boys", "Focus", "Ibrahim", "Jungles"];
+    var type = typeof person;
+    document.write(type);
+    for (var i = 0; i < person.length; i++) {
+      document.getElementById("loop").innerHTML += person[i] + "<br>";
+    }
+
+    // Array Method
+
+    // Most useful Array Method
+
+    // The forEach() Method
+
+    // The forEach() method is another way to loop over an array, or
+    // access each element's data.
+
+    // it executes a callback function for each array element
+
+    //   var country = ["Nigeria", "London", "Ghana", "France"];
+    //   country.forEach(function (val, i, arr) {
+    //     document.write(i + ": " + val + "<br>");
+    //   });
+
+    // The callback function is invoked with 3 arguments
+    // 1: The value of the element
+    // 2: The index of the element
+    // 3: The array itself
+
+    // Arrays to Strings
+
+    // The join() method creates and returns a new string by Combining all the elements
+
+    // The elements are separated by the specified separator character.
+
+    // If none is specified, it separates the elements with commas.
+
+    var food = ["Rice", "Beans", "Yam"];
+    var str = food.join("-");
+    document.write(str);
+
+    // Strings to Arrays
+    // It is also possible to convert a string into an array, this is done by the
+    // split() method
+
+    // The split method takes a separator string as its argument
+
+    // The method splits the string at each point where the separator occur
+
+    var text = "I love to code";
+    var arr = text.split(" ");
+    document.write("<br>" + typeof arr + ": " + arr);
+
+    // Merging Arrays
+    // The concat() method merges two or more arrays
+
+    var vehicle = ["Toyoto", "Camry", "Benz"];
+    var language = ["Yoruba", "English", "French"];
+
+    var jumfag = vehicle.concat(language);
+    document.write("<br>" + jumfag);
+
+    // Merging three or more arrays
+
+    var vehicle = ["Toyoto", "Camry", "Benz"];
+    var language = ["Yoruba", "English", "French"];
+
+    // Classwork-- concatinating two or more Arrays
+
+    var animal = ["Lion", "Cow", "Elephant"];
+    var sport = ["Football", "Volleyball", "Basketball"];
+    var company = ["Dangote", "Tesla", "MAlhub"];
+
+    var sum = animal.concat(sport).concat(company);
+    var sum = animal.concat(sport, company);
+    document.write("<br>" + sum);
+
+    // Searching an Item
+
+    // The indexOf() method returns the index of the first occurence of an item
+
+    Code
+
+    let dev = ["White_Code", "Dev_Suite", "Geeky_Adams", "Sofwan_Coder"];
+    let senior = dev.indexOf("Sofwan_Coder");
+    document.write(senior);
+
+    //Slicing an Array
+
+    // The slice() method returns a new copy of a section of an Array
+    // It takes two arguments:
+
+    Code
+
+    var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+    fruits.slice(1);
+    var citrus = fruits;
+    document.write("<br> <br>" + citrus);
+
+    //Splicing an Array
+    // The splice() method changes the contents of am array by removing or
+    // replacing existing elements and/or adding new elements in place.
+    // It takes three or more arguments:
+    const app = ["WhatsApp", "Facebook", "Mimo", "Messenger"];
+    app.splice(2, 0, "BoomPlay", "LinkedIn");
+
+    var add = app;
+    document.write("<br>" + "<br>" + add);
+
+      // start - The index where the changing begins
+      // deleteCount - The number of the elements to remove and replace from the start
+      // element1, element2, ... - the elements to add to the array
+
+      //Code
+
+      // Removing an Array Item
+
+      //Array Sorting
+
+      //Array iteration
+  </script>
+</body>
+
+</html>

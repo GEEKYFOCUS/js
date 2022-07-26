@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String In Js</title>
+</head>
+
+<body>
+    <button onclick="greetings()">Let Me Greet You</button> <br>
+    <p id="demo"></p>
+
+    <script>
+        //Strings
+
+        //Escape Characters
+        var str5 = "You are doing \"Well\" "; //Escaping " 
+        var str6 = "You are doing \'Well\'"; //Escaping '  
+        var str7 = "Escaping backslash \\"; //Escaping \
+
+        document.getElementById("demo").innerHTML = str5 + "<br>" +
+        str6 + "<br>" + str7;
+
+        //Concatenation Contextual Example
+        function greetings() {
+            var username = prompt("What is your name?");
+            var str4 = "Nice to meet you " + username;
+
+            alert(str4);
+        }
+        //Strings is a set of characters enclosed in quotes
+
+        //Double quotes
+        var text = "Hello World!";
+        document.write(text + "<br>");
+
+        //Single qoute
+        var Text = 'Hello World!';
+        document.write(Text + "<br>");
+
+        //Concatenating Strings
+        var str1 = "Good";
+        var str2 = "Morning";
+
+        var join = str1 + " " + str2;
+        document.write(join + "<br>");
+
+        var str3 = "Good";
+
+        str3 += " Afternoon";
+
+        document.write(str3);
+
+        //String Method
+
+        //Getting string Lenght
+        var bee = "MALhub";
+        var beelen = bee.length;
+
+        document.write("<br>" + beelen);
+
+
+        //Retrieving A Character
+        var dev = "Ibrahim";
+        var code = dev[6];
+
+        document.write("<br>" + code);
+
+        //Finding a Substring in a String
+
+        var sub = "Where are they, Where did they go.";
+        var substr = sub.indexOf("go");
+
+        document.write(substr);
+    </script>
+</body>
+
+</html>

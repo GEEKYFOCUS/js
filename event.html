@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event</title>
+</head>
+
+<body>
+    <button onclick='alert("Why did you hate JS?");'>Click Me!</button> <br />
+    <br />
+    <button id="btn">Event</button> <br />
+    <br />
+
+    <button onclick="myfunc()">Example</button> <br />
+    <br />
+    <button id="ibro">Listner</button> <br />
+    <br />
+
+    <label>
+        choose a City
+        <select name="city" id="city">
+            <option value="Berlin">Berlin</option>
+            <option value="Tokyo">Tokyo</option>
+            <option value="Lagos">Lagos</option>
+            <option value="Abuja">Abuja</option>
+            <!-- <option value="Berlin">Berlin</option> -->
+        </select>
+    </label>
+
+    <p>You selected: <span id="demo"></span></p>
+
+    <p id="change">Mouse hover on me</p>
+    <br /><br />
+
+    <form action="form">
+        <textarea name="viewport" id="ment" cols="30" rows="10"> </textarea>
+    </form>
+
+    <p id="para">Output</p>
+
+    Type in your Name here: <input type="text" id="more" /> <br /><br />
+
+    What is your worst experience in the JS: <input type="text" id="most" />
+    <br /><br />
+
+    <br /><a href="https://www.w3schools.com">Click here to go to w3schools.com</a>
+    <br />
+    <br />
+    <input type="text" id="inpit" value="just copy this" /> <br><br>
+
+    <img src="image.div" id="image">
+    <p id="err"></p> <br><br>
+
+
+
+    <form action="/action_page.php" method="get">
+        Name: <input type="text" id="outpit" name="fname" pattern=".{6,}" required>
+        <input type="submit" value="submit">
+    </form> <br><br>
+
+    <form action="form">
+        <textarea name="viewport" id="sucks" cols="30" rows="10"> </textarea>
+    </form>
+
+    <button id="intake">Rewrite this</button>
+
+
+
+    <script>
+        // OtherEvent listner
+        // 1 The Onfocus Event
+        //  Definition:The onfocus event occurs when an element gets focus.
+        // The onfocus event is the opposite of the onblur event.
+
+        var mari = document.getElementById("more");
+        mari.addEventListener("focus", function () {
+            document.getElementById("more").innerHTML = mari.style.backgroundColor =
+                "red";
+        });
+
+        // 2 blur
+        //     Definition: The onblur event occurs when an object loses focus.
+        //   The onblur event is most often used with form validation code(e.g.when the user leaves a form field).
+        //   The blur is the opposite of OnFocus
+
+        var anime = document.getElementById("most");
+        anime.addEventListener("blur", function () {
+            document.getElementById("most").innerHTML =
+                anime.style.backgroundColor = "blue";
+        });
+
+        // 3 Afterprint
+        // Definition: The onafterprint event occurs when a page has started printing, or if the print dialogue box has been closed.
+
+        window.addEventListener("afterprint", function () {
+            alert("This page is being printed");
+        });
+
+        //     4 Beforeprint
+        //    Definition: The onbeforeprint event occurs when a page is about to be printed (before the print dialogue box appears).
+
+        //  The onbeforeprint event is the opposite of the onafterprint event
+        window.addEventListener("beforeprint", function () {
+            alert("This page is being printed");
+        });
+
+        // 5 beforeunload
+        //          Definition: The onbeforeunload event occurs when the document is about to be unloaded.
+
+        // This event allows you to display a message in a confirmation dialog box to inform the user whether he/she wants to stay or leave the current page.
+
+        // window.addEventListener("beforeunload", function (event) {
+        //     event.returnValue = "Just keep mute";
+        // });
+
+        // 6 copy
+        //         Definition: The oncopy event occurs when the user copies the content of an element.
+
+        // Tip: The oncopy event also occurs when the user copies an element, for example, an image, created with the <img> element.
+
+        // Tip: The oncopy event is mostly used on <input> elements with type="text".
+
+        var java = document.getElementById("inpit");
+        java.addEventListener("copy", function () {
+            alert("You are about to copy");
+        });
+
+        // 7 Cut
+        var java = document.getElementById("inpit");
+        java.addEventListener("cut", function () {
+            alert("You are about to cut");
+        });
+
+        //  No 8 Error
+        //          Definition: The onerror event is triggered if an error occurs while loading an external file (e.g. a document or an image).
+
+        // Tip: When used on audio/video media, related events that occurs when there is some kind of disturbance to the media loading process, are:
+
+        var x = document.getElementById("image")
+        x.addEventListener("error", function () {
+            document.getElementById("err").innerHTML = "This is not an image"
+        })
+
+        // No 9 invalid
+        //        Definition: The oninvalid event occurs when a submittable <input> element is invalid.
+
+        // For example, the input field is invalid if the required attribute is set and the field is empty (the required attribute specifies that the input field must be filled out before submitting the form).
+
+        var y = document.getElementById("outpit")
+        y.addEventListener("invalid", function () {
+            document.getElementById("outpit").innerHTML = alert("Must contain 6 or more characters")
+        })
+        // Extras
+        var mood = document.getElementById("sucks")
+        mood.addEventListener("keypress", function () {
+            document.getElementById("intake").innerHTML = mood.value
+        })
+        // short-test
+        var area = document.getElementById("ment");
+        area.addEventListener("keypress", function () {
+            document.getElementById("para").innerHTML = area.value;
+        });
+
+        // Example
+        var bari = document.getElementById("change");
+
+        bari.addEventListener("mousemove", function () {
+            bari.innerHTML = "Agba Coder";
+        });
+        //Example
+        var btn = document.getElementById("btn");
+
+        btn.onclick = function () {
+            alert("Why did you hate JS?");
+        };
+
+        function myfunc() {
+            alert("Hello World");
+        }
+
+        // |The addEventListner() Methods
+
+        var ibrahim = document.getElementById("ibro");
+        ibrahim.addEventListener("click", function () {
+            alert("The button was clicked");
+        });
+
+        // "The first parameters is the event type and the second parameter is the event listner"
+        // The "click" there is the event listner
+
+        // The Change Event
+
+        var lect = document.getElementById("city");
+        lect.addEventListener("change", function () {
+            var val = document.getElementById("city").value;
+            document.getElementById("demo").innerHTML = val;
+        });
+    </script>
+</body>
+
+</html>

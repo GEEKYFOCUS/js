@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function</title>
+  </head>
+
+  <body>
+    <p id="demo"></p>
+    <p id="number"></p>
+    <p id="invoke">Sum will be printed here.</p>
+    <button onclick="addnumber(20,15)">Click Me!</button>
+    <button onclick="showDailog()">Call Function</button>
+    <p id="example"></p>
+
+    <script>
+      // Global scope
+      var fruit = "Apple";
+
+      //Defining A Function
+      // function writetext(str) {
+      //   document.getElementById("demo").innerHTML = str;
+      // }
+
+      //Calling the Function
+      // writetext("Hello World!");
+
+      // function addnumbers(num1, num2) {
+      //   var sum = num1 + num2;
+      //   document.getElementById("number").innerHTML = sum;
+      // }
+
+      //Calling the Function
+      // addnumbers(5,5)
+
+      // function addnumber(nums1, nums2) {
+      //   var sums = nums1 + nums2;
+      //   document.getElementById("invoke").innerHTML =sums;
+      // }
+
+      // function showDailog() {
+      //   alert("Welcome to MALhub");
+      // }
+
+      // function call() {
+      //   document.getElementById("demo").innerHTML =
+      //     "My Favorite Fruite is " + fruit;
+      // }
+
+      // Return Statement
+
+      // The return statement is used in a function to stop
+      // its execution and to return a value to the function caller.
+
+      // function addnumber(num1, num2) {
+      //     var sum = num1 + num2;
+      //     return sum;
+      // }
+
+      // // The function caller
+      // document.getElementById("demo").innerHTML = addnumber(10, 10);
+
+      // Another Example under return statement
+
+      function addnum(number1, number2) {
+          var sum = 10 * 8;
+          return sum;
+      }
+      // The function caller
+      document.write(addnum() + "<br>");
+
+      // Another Example under return statement
+      function getFullname(firstname, lastname) {
+          return firstname + " " + lastname;
+      }
+
+      var fullname = getFullname("Kamaldeen", "Sulyman");
+      document.write(fullname);
+
+      function writetext(text)  {
+          // Block of code will be executed here
+          document.getElementById("demo").innerHTML = text;
+      }
+
+      writetext("Hello World");
+
+      // function addNumbers(num1,num2){
+      //     var sum = num1 * num2;
+      //     document.getElementById("example").innerHTML = sum;
+      // }
+
+      // addNumbers(6,5);
+    </script>
+  </body>
+</html>
